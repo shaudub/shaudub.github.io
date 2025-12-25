@@ -162,6 +162,32 @@ export default function Home() {
                           </div>
                         </AccordionContent>
                       </AccordionItem>
+
+                      <AccordionItem value="item-2" className="border-border/40">
+                        <AccordionTrigger className="hover:no-underline py-2 group text-left">
+                          <div className="flex flex-col items-start gap-1">
+                            <span className="text-sm text-muted-foreground font-normal">November 2025</span>
+                            <a href="https://underwritingcrypto.substack.com/p/underwriting-crypto-covering-114" target="_blank" rel="noopener noreferrer" className="text-xl font-medium group-hover:text-primary transition-colors text-left" onClick={(e) => e.stopPropagation()}>CashApp launchs BTC payments and stablecoin support</a>
+                          </div>
+                        </AccordionTrigger>
+                        <AccordionContent className="pt-2 pb-4">
+                          <div className="text-lg leading-relaxed text-muted-foreground font-light space-y-4">
+                            <p>Block does multiple things - they run Cashapp, Square, Afterpay, Tidal, Proto (BTC mining), and Bitkey (BTC hardware wallets). Hell of a lineup merging consumer payments, merchant acceptance, lending, economic sovereignty, and now, the ability to transact in bitcoin and stablecoins.</p>
+                            <p>58M users can send funds over the lightning network without having to spend/hold bitcoin - this means they can spend fiat and the merchant receives bitcoin as payment. Additionally, these users can convert USD to USDC instantly and send P2P or merchant payments over the Solana network.</p>
+                            <p>Some other fun facts:</p>
+                            <ul className="list-disc pl-5 space-y-2">
+                              <li>Square sellers that enable bitcoin acceptance get zero fees on sales</li>
+                              <li>Jack Dorsey is a top contender for Satoshi Nakamoto’s true identity</li>
+                              <li>58M users means 1in 6 people in the United States use CashApp</li>
+                              <li>40% of CashApps userbase makes under 50K annually</li>
+                            </ul>
+                            <div className="pt-4">
+                              <p className="font-bold mb-2">Shaurya’s take</p>
+                              <p>It’s hard to find a company that has done more for Bitcoin than Block. Diversifying BTC mining with Proto, making self-custody sexy with Bitkey, and incorporating BTC directly into its well-developed payments ecosystem is no small feat. Using BTC for payments and enabling merchant acceptance at scale marks an undeniable transition for BTC from “Store of Value” to also being a “Medium of Exchange”, making it feel more like money than ever before. Add in Solana addresses and instant, spread fee USDC onramps for all 58M users, and crypto makes another step towards being the default financial system for the future.</p>
+                            </div>
+                          </div>
+                        </AccordionContent>
+                      </AccordionItem>
                     </Accordion>
                   </div>
                 </AccordionContent>
