@@ -33,12 +33,12 @@ export default function Home() {
           className="space-y-16"
         >
           {/* Header Section */}
-          <div className="flex flex-col items-center text-center space-y-8">
+          <div className="flex flex-col items-center text-center space-y-4">
             <motion.div 
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.5 }}
-              className="shrink-0"
+              className="shrink-0 mb-4"
             >
               <div className="w-40 h-40 md:w-48 md:h-48 overflow-hidden shadow-sm border-4 border-foreground/5">
                 <img 
@@ -49,21 +49,24 @@ export default function Home() {
               </div>
             </motion.div>
 
-            <div className="space-y-6 max-w-xl mx-auto">
+            <div className="space-y-4 max-w-xl mx-auto">
               <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">
                 Shaurya Dubey
               </h1>
             </div>
+            
+            <motion.p 
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+              className="text-lg leading-relaxed text-foreground/90 font-light max-w-2xl mx-auto px-4"
+            >
+              Working on commercial finance for Circle ($USDC) and writing about crypto current events at Underwriting Crypto. My twitter handle is @shaudub and my email is dubeyshaurya@gmail.com.
+            </motion.p>
           </div>
 
           {/* Content Sections */}
           <div className="grid gap-12 md:gap-16">
-            <section className="space-y-4 text-center">
-              <p className="text-lg leading-relaxed text-foreground/90 font-light max-w-2xl mx-auto">
-                Working on commercial finance for Circle ($USDC) and writing about crypto current events at Underwriting Crypto.
-              </p>
-            </section>
-
             <section className="space-y-4">
               <p className="text-lg leading-relaxed text-muted-foreground font-light">
                 My work at Circle focuses on commercial incentives, specifically tracking how partnership revenue sharing influences USDC circulation growth and net interest margin. I have also led ad-hoc projects; some favorites include analyses for new product launches, marketing spend planning, and helping take $CRCL public. The best parts of my work are interdisciplinary, and I am lucky to work with teams in data science, marketing, product, investor relations, and more.
@@ -95,12 +98,6 @@ export default function Home() {
                   <h3 className="text-xl font-serif font-medium group-hover:text-primary transition-colors">The State of Layer 2s</h3>
                 </a>
               </div>
-            </section>
-            
-            <section className="space-y-4">
-              <p className="text-lg leading-relaxed text-muted-foreground font-light">
-                My twitter handle is @shaudub and my email is dubeyshaurya@gmail.com.
-              </p>
             </section>
           </div>
         </motion.div>
