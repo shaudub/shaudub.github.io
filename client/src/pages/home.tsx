@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Linkedin, Mail, Twitter } from "lucide-react";
-import profileImage from "@assets/generated_images/professional_minimalist_profile_portrait.png";
+import profileImage from "@assets/IMG_1569_1766626569319.png";
 
 export default function Home() {
   return (
@@ -51,21 +51,25 @@ export default function Home() {
 
             <div className="space-y-6 max-w-xl mx-auto">
               <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">
-                Alex Morgan
+                Shaurya Dubey
               </h1>
-              <p className="text-lg text-foreground/90 leading-relaxed max-w-lg mx-auto">
-                Working on commercial finance for Circle ($USDC) and writing about crypto current events at Underwriting Crypto.
-              </p>
             </div>
           </div>
 
           {/* Content Sections */}
           <div className="grid gap-12 md:gap-16">
+            <section className="space-y-4 text-center">
+              <p className="text-lg leading-relaxed text-foreground/90 font-light max-w-2xl mx-auto">
+                Working on commercial finance for Circle ($USDC) and writing about crypto current events at Underwriting Crypto.
+              </p>
+            </section>
+
             <section className="space-y-4">
               <p className="text-lg leading-relaxed text-muted-foreground font-light">
                 My work at Circle focuses on commercial incentives, specifically tracking how partnership revenue sharing influences USDC circulation growth and net interest margin. I have also led ad-hoc projects; some favorites include analyses for new product launches, marketing spend planning, and helping take $CRCL public. The best parts of my work are interdisciplinary, and I am lucky to work with teams in data science, marketing, product, investor relations, and more.
               </p>
             </section>
+
 
             <section className="space-y-6">
               <div className="space-y-4">
