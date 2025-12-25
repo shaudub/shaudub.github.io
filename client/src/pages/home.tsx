@@ -99,7 +99,7 @@ export default function Home() {
               transition={{ delay: 0.3, duration: 0.5 }}
               className="text-lg leading-relaxed text-foreground/90 font-light max-w-2xl mx-auto px-4"
             >
-              Working on commercial finance for Circle ($USDC) and writing about crypto current events at Underwriting Crypto. My twitter handle is @shaudub and my email is dubeyshaurya@gmail.com.
+              Working on commercial finance for Circle ($USDC) and writing about crypto current events at <a href="https://underwritingcrypto.substack.com/" target="_blank" rel="noopener noreferrer" className="underline decoration-1 underline-offset-4 hover:text-primary transition-colors">Underwriting Crypto</a>. My email is dubeyshaurya@gmail.com and my twitter handle is '<a href="https://x.com/shaudub" target="_blank" rel="noopener noreferrer" className="underline decoration-1 underline-offset-4 hover:text-primary transition-colors">@shaudub</a>'.
             </motion.p>
           </div>
 
