@@ -33,14 +33,14 @@ export default function Home() {
           className="space-y-16"
         >
           {/* Header Section */}
-          <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
+          <div className="flex flex-col items-center text-center space-y-8">
             <motion.div 
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.5 }}
               className="shrink-0"
             >
-              <div className="w-32 h-32 md:w-40 md:h-40 overflow-hidden shadow-sm">
+              <div className="w-40 h-40 md:w-48 md:h-48 overflow-hidden shadow-sm border-4 border-foreground/5">
                 <img 
                   src={profileImage} 
                   alt="Profile Picture" 
@@ -49,11 +49,11 @@ export default function Home() {
               </div>
             </motion.div>
 
-            <div className="space-y-4 pt-2">
-              <h1 className="text-4xl md:text-5xl font-serif font-bold tracking-tight text-foreground">
+            <div className="space-y-6 max-w-xl mx-auto">
+              <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-foreground">
                 Alex Morgan
               </h1>
-              <p className="text-lg text-foreground/90 leading-relaxed font-light max-w-lg">
+              <p className="text-lg text-foreground/90 leading-relaxed max-w-lg mx-auto">
                 Working on commercial finance for Circle ($USDC) and writing about crypto current events at Underwriting Crypto.
               </p>
             </div>

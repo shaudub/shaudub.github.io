@@ -16,15 +16,45 @@
   --color-accent-foreground: hsl(var(--accent-foreground));
   --color-border: hsl(var(--border));
   
-  --font-sans: 'Inter', sans-serif;
-  --font-serif: 'Libre Baskerville', serif;
+  --font-sans: 'Courier New', Courier, monospace;
+  --font-serif: 'Courier New', Courier, monospace;
   
   --radius: 0.5rem;
 }
 
 :root {
-  --background: 20 14% 12%; /* Dark, warm espresso/charcoal */
-  --foreground: 30 20% 90%; /* Light warm beige text */
+  --background: 25 90% 88%; /* Peach Fuzz */
+  --foreground: 20 10% 15%; /* Dark warm gray for contrast */
+  
+  --primary: 20 10% 15%;
+  --primary-foreground: 25 90% 88%;
+  
+  --secondary: 25 50% 92%;
+  --secondary-foreground: 20 10% 15%;
+  
+  --muted: 25 30% 80%;
+  --muted-foreground: 20 10% 35%;
+  
+  --accent: 25 50% 92%;
+  --accent-foreground: 20 10% 15%;
+  
+  --border: 20 10% 75%;
+  
+  --card: 25 90% 88%;
+  --card-foreground: 20 10% 15%;
+  --popover: 25 90% 88%;
+  --popover-foreground: 20 10% 15%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  --input: 20 10% 75%;
+  --ring: 20 10% 15%;
+  
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 20 14% 12%;
+  --foreground: 30 20% 90%;
   
   --primary: 30 20% 90%;
   --primary-foreground: 20 14% 12%;
@@ -39,36 +69,6 @@
   --accent-foreground: 30 20% 90%;
   
   --border: 20 10% 20%;
-  
-  --card: 20 14% 12%;
-  --card-foreground: 30 20% 90%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 240 10% 3.9%;
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 0 0% 98%;
-  --input: 240 5.9% 90%;
-  --ring: 240 5.9% 10%;
-  
-  --radius: 0.5rem;
-}
-
-.dark {
-  --background: 240 10% 3.9%;
-  --foreground: 0 0% 98%;
-  
-  --primary: 0 0% 98%;
-  --primary-foreground: 240 5.9% 10%;
-  
-  --secondary: 240 3.7% 15.9%;
-  --secondary-foreground: 0 0% 98%;
-  
-  --muted: 240 3.7% 15.9%;
-  --muted-foreground: 240 5% 64.9%;
-  
-  --accent: 240 3.7% 15.9%;
-  --accent-foreground: 0 0% 98%;
-  
-  --border: 240 3.7% 15.9%;
 }
 
 @layer base {
@@ -79,6 +79,6 @@
     @apply font-sans antialiased bg-background text-foreground;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif;
+    @apply font-bold;
   }
 }
