@@ -53,8 +53,8 @@ export default function Home() {
               <h1 className="text-4xl md:text-5xl font-serif font-bold tracking-tight text-foreground">
                 Alex Morgan
               </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed font-light max-w-lg">
-                Digital craftsman and frontend engineer based in San Francisco. I build accessible, pixel-perfect interfaces that feel human.
+              <p className="text-lg text-foreground/90 leading-relaxed font-light max-w-lg">
+                Working on commercial finance for Circle ($USDC) and writing about crypto current events at Underwriting Crypto.
               </p>
             </div>
           </div>
@@ -62,52 +62,41 @@ export default function Home() {
           {/* Content Sections */}
           <div className="grid gap-12 md:gap-16">
             <section className="space-y-4">
-              <h2 className="text-sm font-bold uppercase tracking-widest text-muted-foreground">Introduction</h2>
-              <p className="text-lg leading-relaxed text-foreground/90 font-light">
-                I've spent the last decade working at the intersection of design and engineering. My philosophy is simple: software should be fast, reliable, and invisible. I believe in tools that empower users without getting in their way. When I'm not coding, you can find me exploring brutalist architecture or brewing the perfect cup of pour-over coffee.
+              <p className="text-lg leading-relaxed text-muted-foreground font-light">
+                My work at Circle focuses on commercial incentives, specifically tracking how partnership revenue sharing influences USDC circulation growth and net interest margin. I have also led ad-hoc projects; some favorites include analyses for new product launches, marketing spend planning, and helping take $CRCL public. The best parts of my work are interdisciplinary, and I am lucky to work with teams in data science, marketing, product, investor relations, and more.
               </p>
             </section>
 
             <section className="space-y-6">
-              <h2 className="text-sm font-bold uppercase tracking-widest text-muted-foreground">What I've Worked On</h2>
-              <div className="space-y-8">
-                <div className="group cursor-pointer">
-                  <h3 className="text-xl font-serif font-medium group-hover:underline decoration-1 underline-offset-4">Vercel Analytics</h3>
-                  <p className="mt-2 text-muted-foreground font-light">
-                    Led the frontend architecture for the real-time analytics dashboard, scaling to support millions of concurrent users.
-                  </p>
-                </div>
-                <div className="group cursor-pointer">
-                  <h3 className="text-xl font-serif font-medium group-hover:underline decoration-1 underline-offset-4">Linear Mobile</h3>
-                  <p className="mt-2 text-muted-foreground font-light">
-                    Contributed to the core interaction patterns and gesture systems for the initial mobile release.
-                  </p>
-                </div>
-                <div className="group cursor-pointer">
-                  <h3 className="text-xl font-serif font-medium group-hover:underline decoration-1 underline-offset-4">Raycast Extensions</h3>
-                  <p className="mt-2 text-muted-foreground font-light">
-                    Built a suite of open-source extensions for developer productivity, downloaded by over 50k users.
-                  </p>
-                </div>
+              <div className="space-y-4">
+                <p className="text-lg leading-relaxed text-muted-foreground font-light">
+                  I write in a crypto current events blog called Underwriting Crypto. We post 5 notable events from the industry every 2 weeks and offer an objective overview of what happened, with a not-as-objective take on what happened on each topic.
+                </p>
+                <p className="text-lg leading-relaxed text-muted-foreground font-light">
+                  Selected excerpts of my writing are below - for the rest, visit our substack.
+                </p>
               </div>
-            </section>
 
-            <section className="space-y-6">
-              <h2 className="text-sm font-bold uppercase tracking-widest text-muted-foreground">Writing</h2>
-              <div className="space-y-6">
+              <div className="space-y-6 pl-4 border-l border-border/50">
                 <a href="#" className="block group">
                   <span className="text-sm text-muted-foreground mb-1 block">Oct 2024</span>
-                  <h3 className="text-xl font-serif font-medium group-hover:underline decoration-1 underline-offset-4">The End of Flat Design</h3>
+                  <h3 className="text-xl font-serif font-medium group-hover:text-primary transition-colors">Stablecoin Market Dynamics</h3>
                 </a>
                 <a href="#" className="block group">
                   <span className="text-sm text-muted-foreground mb-1 block">Aug 2024</span>
-                  <h3 className="text-xl font-serif font-medium group-hover:underline decoration-1 underline-offset-4">Building for Speed</h3>
+                  <h3 className="text-xl font-serif font-medium group-hover:text-primary transition-colors">DeFi Regulation Overview</h3>
                 </a>
                 <a href="#" className="block group">
                   <span className="text-sm text-muted-foreground mb-1 block">May 2024</span>
-                  <h3 className="text-xl font-serif font-medium group-hover:underline decoration-1 underline-offset-4">Why I Still Use Vanilla CSS</h3>
+                  <h3 className="text-xl font-serif font-medium group-hover:text-primary transition-colors">The State of Layer 2s</h3>
                 </a>
               </div>
+            </section>
+            
+            <section className="space-y-4">
+              <p className="text-lg leading-relaxed text-muted-foreground font-light">
+                My twitter handle is @shaudub and my email is dubeyshaurya@gmail.com.
+              </p>
             </section>
           </div>
         </motion.div>
