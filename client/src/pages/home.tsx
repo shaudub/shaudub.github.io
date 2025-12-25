@@ -146,6 +146,29 @@ export default function Home() {
 
                   <div className="space-y-6 pl-4 border-l border-border/50">
                     <Accordion type="single" collapsible className="w-full">
+                      <AccordionItem value="item-4" className="border-border/40">
+                        <AccordionTrigger className="hover:no-underline py-2 group text-left">
+                          <div className="flex flex-col items-start gap-1">
+                            <span className="text-sm text-muted-foreground font-normal">December 2025</span>
+                            <a href="https://underwritingcrypto.substack.com/p/underwriting-crypto-122-1215" target="_blank" rel="noopener noreferrer" className="text-xl font-medium group-hover:text-primary transition-colors text-left" onClick={(e) => e.stopPropagation()}>Hyperliquid deploys native USDC with CCTP route</a>
+                          </div>
+                        </AccordionTrigger>
+                        <AccordionContent className="pt-2 pb-4">
+                          <div className="text-lg leading-relaxed text-muted-foreground font-light space-y-4">
+                            <p>Hyperliquid is moving beyond its bridged USDC training wheels with native USDC and CCTP integration on HyperEVM. Before, users got USDC (on a CEX), sent to their address on Arbitrum, then sent to a Hyperliquid contract on Arbitrum that stores the native USDC, then credits the users HyperCore balance, enabling trading. Now users can use the CCTP bridge to send native USDC directly to HyperEVM with smooth interop with HyperCore, improving security, simplifying the experience, and lowering fees.</p>
+                            <p>What exactly is HyperCore and HyperEVM? Hyperliquid’s L1 architecture has two surfaces with the same consensus mechanism. HyperCore is the order book DEX where liquidity lives, optimized for speed and scalability. Its emphasis on trading operations makes it great for traders, but less flexible as a platform for general smart contract development. HyperEVM fills the gap, offering an EVM smart contract layer to build on Hypercore’s liquidity with a dev friendly experience. The two communicate via HyperBridges, allowing seamless asset transfers.</p>
+                            <p>Over 4B of bridged USDC means multiple less-than-ideal things for Hyperliquid and users:</p>
+                            <ul className="list-disc pl-5 space-y-2">
+                              <li>Most users needs ETH and USDC on Arbitrum to use Hyperliquid</li>
+                              <li>Native USDC was stored on an Arbitrum contract, increasing honeypot risk</li>
+                              <li>Bridged USDC used for trading on HyperCore needed to be manually bridged to HyperEVM to be used in apps</li>
+                            </ul>
+                            <p>The integration of native USDC on HyperEVM and a native CCTP route to HyperEVM unifies liquidity, enables one-click transfers, seamless interop, and lower fees. The CoreDepositWallet contract takes native USDC and credits HyperCore protocol balances, directly backed by native USDC on HyperEVM.</p>
+                            <p>USDC is the main quote asset on Hyperliquid, so this deployment is a win for Hyperliquid, Circle, and users alike, driving seamless interop, unified liquidity, and one-click transfers with lower fees. The transition from Hypercore bridged USDC to native USDC is now underway, with the Arbitrum bridge still active as a fallback, though public statements from Hyperliquid indicate it will be deprecated.</p>
+                          </div>
+                        </AccordionContent>
+                      </AccordionItem>
+
                       <AccordionItem value="item-3" className="border-border/40">
                         <AccordionTrigger className="hover:no-underline py-2 group text-left">
                           <div className="flex flex-col items-start gap-1">

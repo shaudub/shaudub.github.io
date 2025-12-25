@@ -1,0 +1,14 @@
+Hyperliquid is moving beyond its bridged USDC training wheels with native USDC and CCTP integration on HyperEVM. Before, users got USDC (on a CEX), sent to their address on Arbitrum, then sent to a Hyperliquid contract on Arbitrum that stores the native USDC, then credits the users HyperCore balance, enabling trading. Now users can use the CCTP bridge to send native USDC directly to HyperEVM with smooth interop with HyperCore, improving security, simplifying the experience, and lowering fees. CCTP integration also connects assets on HyperEVM to the rest of the USDC world, bolstering cross-chain liquidity.
+
+What exactly is HyperCore and HyperEVM? Hyperliquid’s L1 architecture has two surfaces with the same consensus mechanism. HyperCore is the order book DEX where liquidity lives, optimized for speed and scalability. Its emphasis on trading operations makes it great for traders, but less flexible as a platform for general smart contract development. HyperEVM fills the gap, offering an EVM smart contract layer to build on Hypercore’s liquidity with a dev friendly experience. The two were linked back in March 2025, making HyperCore spot assets usable as building blocks on HyperEVM.
+
+Over 4B of bridged USDC means multiple less-than-ideal things for Hyperliquid and users:
+
+
+Most users needs ETH and USDC on Arbitrum to use Hyperliquid
+Native USDC was stored on an Arbitrum contract, increasing honeypot risk
+Bridged USDC used for trading on HyperCore needed to be manually bridged to HyperEVM to be used in apps
+
+The integration of native USDC on HyperEVM and a native CCTP route to HyperEVM unifies liquidity, enables one-click transfers, seamless interop, and lower fees. The CoreDepositWallet contract takes native USDC and credits HyperCore protocol balances, directly backed by native USDC on HyperEVM.
+
+USDC is the main quote asset on Hyperliquid, so this deployment is a win for Hyperliquid, Circle, and users alike, driving seamless interop, unified liquidity, and  one-click transfers with lower fees. The transition from Hypercore bridged USDC to native USDC is now underway, with the Arbitrum bridge still active as a fallback, though public statements from Hyperliquid indicate it will be deprecated.
