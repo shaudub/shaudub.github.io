@@ -112,7 +112,7 @@ export default function Home() {
                 </AccordionTrigger>
                 <AccordionContent className="pt-4 pb-6">
                   <p className="text-lg leading-relaxed text-muted-foreground font-light">
-                    My work at Circle focuses on commercial incentives, specifically tracking how partnership revenue sharing influences USDC circulation growth and net interest margin. I have also led ad-hoc projects; some favorites include analyses for new product launches, marketing spend planning, and helping <a href="https://www.sec.gov/Archives/edgar/data/1876042/000119312525070481/d737521ds1.htm" target="_blank" rel="noopener noreferrer" className="underline decoration-1 underline-offset-4 hover:text-primary transition-colors">take $CRCL public</a>. The best parts of my work are interdisciplinary, and I am lucky to work with teams in data science, marketing, product, investor relations, and more.
+                    My work at Circle focuses on commercial incentives, specifically understanding how partnership revenue sharing influences USDC circulation growth and net interest margin. Other initiatives I've contributed to include analyses for new product lines, marketing spend planning, and helping <a href="https://www.sec.gov/Archives/edgar/data/1876042/000119312525070481/d737521ds1.htm" target="_blank" rel="noopener noreferrer" className="underline decoration-1 underline-offset-4 hover:text-primary transition-colors">take $CRCL public</a>. The best parts of my work are interdisciplinary, and I am lucky to collaborate with teams in data science, marketing, product, investor relations, and more.
                   </p>
                 </AccordionContent>
               </AccordionItem>
