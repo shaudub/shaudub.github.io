@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Linkedin, Mail, Twitter } from "lucide-react";
+import { Linkedin, Mail, Twitter, Moon, Sun } from "lucide-react";
 import profileImage from "@assets/IMG_1569_1766626569319.png";
 import {
   Accordion,
@@ -8,13 +8,46 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { useState, useEffect } from "react";
 
 export default function Home() {
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    setTheme(isDark ? "dark" : "light");
+  }, []);
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
+
   return (
-    <div className="min-h-screen w-full bg-background relative selection:bg-primary/10">
+    <div className="min-h-screen w-full bg-background relative selection:bg-primary/10 transition-colors duration-300">
       {/* Top Right Navigation */}
       <nav className="absolute top-6 right-6 md:top-8 md:right-8 z-10">
         <div className="flex gap-2">
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            onClick={toggleTheme}
+            className="rounded-full hover:bg-foreground hover:text-background transition-colors mr-2"
+          >
+            {theme === "light" ? (
+              <Moon className="h-5 w-5" />
+            ) : (
+              <Sun className="h-5 w-5" />
+            )}
+            <span className="sr-only">Toggle theme</span>
+          </Button>
           <Button variant="ghost" size="icon" className="rounded-full hover:bg-foreground hover:text-background transition-colors">
             <Twitter className="h-5 w-5" />
             <span className="sr-only">X (Twitter)</span>
@@ -45,7 +78,7 @@ export default function Home() {
               transition={{ delay: 0.2, duration: 0.5 }}
               className="shrink-0 mb-4"
             >
-              <div className="w-40 h-40 md:w-48 md:h-48 overflow-hidden shadow-sm border-4 border-foreground/5">
+              <div className="w-40 h-40 md:w-48 md:h-48 overflow-hidden shadow-sm">
                 <img 
                   src={profileImage} 
                   alt="Profile Picture" 
