@@ -161,7 +161,7 @@ export default function Home() {
                             <ul className="list-disc pl-5 space-y-2">
                               <li>Square sellers that enable bitcoin acceptance get zero fees on sales</li>
                               <li>Jack Dorsey is a top contender for Satoshi Nakamoto’s true identity</li>
-                              <li>58M users means 1in 6 people in the United States use CashApp</li>
+                              <li>58M users means 1 in 6 people in the United States use CashApp</li>
                               <li>40% of CashApps userbase makes under 50K annually</li>
                             </ul>
                             <div className="pt-4">
