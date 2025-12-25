@@ -1,8 +1,13 @@
 import { motion } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Linkedin, Mail, Twitter } from "lucide-react";
 import profileImage from "@assets/IMG_1569_1766626569319.png";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 export default function Home() {
   return (
@@ -65,40 +70,51 @@ export default function Home() {
             </motion.p>
           </div>
 
-          {/* Content Sections */}
-          <div className="grid gap-12 md:gap-16">
-            <section className="space-y-4">
-              <p className="text-lg leading-relaxed text-muted-foreground font-light">
-                My work at Circle focuses on commercial incentives, specifically tracking how partnership revenue sharing influences USDC circulation growth and net interest margin. I have also led ad-hoc projects; some favorites include analyses for new product launches, marketing spend planning, and helping take $CRCL public. The best parts of my work are interdisciplinary, and I am lucky to work with teams in data science, marketing, product, investor relations, and more.
-              </p>
-            </section>
+          {/* Accordion Sections */}
+          <div className="max-w-2xl mx-auto w-full">
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="experience" className="border-border/40">
+                <AccordionTrigger className="text-xl font-bold hover:no-underline hover:text-primary transition-colors">
+                  Experience
+                </AccordionTrigger>
+                <AccordionContent className="pt-4 pb-6">
+                  <p className="text-lg leading-relaxed text-muted-foreground font-light">
+                    My work at Circle focuses on commercial incentives, specifically tracking how partnership revenue sharing influences USDC circulation growth and net interest margin. I have also led ad-hoc projects; some favorites include analyses for new product launches, marketing spend planning, and helping take $CRCL public. The best parts of my work are interdisciplinary, and I am lucky to work with teams in data science, marketing, product, investor relations, and more.
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
 
+              <AccordionItem value="writing" className="border-border/40">
+                <AccordionTrigger className="text-xl font-bold hover:no-underline hover:text-primary transition-colors">
+                  Writing
+                </AccordionTrigger>
+                <AccordionContent className="pt-4 pb-6 space-y-6">
+                  <div className="space-y-4">
+                    <p className="text-lg leading-relaxed text-muted-foreground font-light">
+                      I write in a crypto current events blog called Underwriting Crypto. We post 5 notable events from the industry every 2 weeks and offer an objective overview of what happened, with a not-as-objective take on what happened on each topic.
+                    </p>
+                    <p className="text-lg leading-relaxed text-muted-foreground font-light">
+                      Selected excerpts of my writing are below - for the rest, visit our substack.
+                    </p>
+                  </div>
 
-            <section className="space-y-6">
-              <div className="space-y-4">
-                <p className="text-lg leading-relaxed text-muted-foreground font-light">
-                  I write in a crypto current events blog called Underwriting Crypto. We post 5 notable events from the industry every 2 weeks and offer an objective overview of what happened, with a not-as-objective take on what happened on each topic.
-                </p>
-                <p className="text-lg leading-relaxed text-muted-foreground font-light">
-                  Selected excerpts of my writing are below - for the rest, visit our substack.
-                </p>
-              </div>
-
-              <div className="space-y-6 pl-4 border-l border-border/50">
-                <a href="#" className="block group">
-                  <span className="text-sm text-muted-foreground mb-1 block">Oct 2024</span>
-                  <h3 className="text-xl font-serif font-medium group-hover:text-primary transition-colors">Stablecoin Market Dynamics</h3>
-                </a>
-                <a href="#" className="block group">
-                  <span className="text-sm text-muted-foreground mb-1 block">Aug 2024</span>
-                  <h3 className="text-xl font-serif font-medium group-hover:text-primary transition-colors">DeFi Regulation Overview</h3>
-                </a>
-                <a href="#" className="block group">
-                  <span className="text-sm text-muted-foreground mb-1 block">May 2024</span>
-                  <h3 className="text-xl font-serif font-medium group-hover:text-primary transition-colors">The State of Layer 2s</h3>
-                </a>
-              </div>
-            </section>
+                  <div className="space-y-6 pl-4 border-l border-border/50">
+                    <a href="#" className="block group">
+                      <span className="text-sm text-muted-foreground mb-1 block">Oct 2024</span>
+                      <h3 className="text-xl font-medium group-hover:text-primary transition-colors">Stablecoin Market Dynamics</h3>
+                    </a>
+                    <a href="#" className="block group">
+                      <span className="text-sm text-muted-foreground mb-1 block">Aug 2024</span>
+                      <h3 className="text-xl font-medium group-hover:text-primary transition-colors">DeFi Regulation Overview</h3>
+                    </a>
+                    <a href="#" className="block group">
+                      <span className="text-sm text-muted-foreground mb-1 block">May 2024</span>
+                      <h3 className="text-xl font-medium group-hover:text-primary transition-colors">The State of Layer 2s</h3>
+                    </a>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </motion.div>
       </div>
