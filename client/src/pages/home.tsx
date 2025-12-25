@@ -117,6 +117,18 @@ export default function Home() {
                 </AccordionContent>
               </AccordionItem>
 
+              <AccordionItem value="past-experience" className="border-border/40">
+                <AccordionTrigger className="text-xl font-bold hover:no-underline hover:text-primary transition-colors">
+                  Past Experience
+                </AccordionTrigger>
+                <AccordionContent className="pt-4 pb-6">
+                  <p className="text-lg leading-relaxed text-muted-foreground font-light">
+                    {/* Add content for past experience here */}
+                    Previous roles and internships where I honed my skills in financial analysis and strategy.
+                  </p>
+                </AccordionContent>
+              </AccordionItem>
+
               <AccordionItem value="writing" className="border-border/40">
                 <AccordionTrigger className="text-xl font-bold hover:no-underline hover:text-primary transition-colors">
                   Writing
