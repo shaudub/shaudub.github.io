@@ -146,23 +146,6 @@ export default function Home() {
 
                   <div className="space-y-6 pl-4 border-l border-border/50">
                     <Accordion type="single" collapsible className="w-full">
-                      <AccordionItem value="item-1" className="border-border/40">
-                        <AccordionTrigger className="hover:no-underline py-2 group text-left">
-                          <div className="flex flex-col items-start gap-1">
-                            <span className="text-sm text-muted-foreground font-normal">October 2025</span>
-                            <a href="https://underwritingcrypto.substack.com/p/underwriting-crypto-covering-1021" target="_blank" rel="noopener noreferrer" className="text-xl font-medium group-hover:text-primary transition-colors text-left" onClick={(e) => e.stopPropagation()}>Banks build stablecoins into Zelle</a>
-                          </div>
-                        </AccordionTrigger>
-                        <AccordionContent className="pt-2 pb-4">
-                          <div className="text-lg leading-relaxed text-muted-foreground font-light space-y-4">
-                            <p>Early Warning Services, the joint venture behind Zelle, is incorporating a stablecoin into Zelle for cross border payments. Zelle processed $1T in volume in 2024 across 2,200 connected banks. The seven owner banks are BofA, Capital One, JPMorgan Chase, PNC, Truist, U.S. Bank, and Wells Fargo.</p>
-                            <p>Separately, banks are pursuing a consortium approach for G7 currency stablecoins including USD, EUR, JPY, GBP, and CAD.</p>
-                            <p>Zelle offers immediate distribution but questionable circulation stickiness. If the main purpose is cross border, this will likely be the classic stablecoin sandwich setup on a blockchain based ACH equivalent.</p>
-                            <p>Split T-Bill returns seven ways and each bank gets maybe 57 basis points assuming 4% yield and no revenue sharing. Compare that to the Q1 2025 bank net interest margin of 3.25% on traditional deposits. When rehypothecation is limited, banks lose money. This is why consortium bank plays are challenging and why tokenized deposits are the most likely outcome for bank led RWAs. Still, leveraging blockchain infrastructure on $1T of volumes is a net positive. Interop battles and competition from Arc and Tempo incoming.</p>
-                          </div>
-                        </AccordionContent>
-                      </AccordionItem>
-
                       <AccordionItem value="item-2" className="border-border/40">
                         <AccordionTrigger className="hover:no-underline py-2 group text-left">
                           <div className="flex flex-col items-start gap-1">
@@ -185,6 +168,23 @@ export default function Home() {
                               <p className="font-bold mb-2">Shaurya’s take</p>
                               <p>It’s hard to find a company that has done more for Bitcoin than Block. Diversifying BTC mining with Proto, making self-custody sexy with Bitkey, and incorporating BTC directly into its well-developed payments ecosystem is no small feat. Using BTC for payments and enabling merchant acceptance at scale marks an undeniable transition for BTC from “Store of Value” to also being a “Medium of Exchange”, making it feel more like money than ever before. Add in Solana addresses and instant, spread fee USDC onramps for all 58M users, and crypto makes another step towards being the default financial system for the future.</p>
                             </div>
+                          </div>
+                        </AccordionContent>
+                      </AccordionItem>
+
+                      <AccordionItem value="item-1" className="border-border/40">
+                        <AccordionTrigger className="hover:no-underline py-2 group text-left">
+                          <div className="flex flex-col items-start gap-1">
+                            <span className="text-sm text-muted-foreground font-normal">October 2025</span>
+                            <a href="https://underwritingcrypto.substack.com/p/underwriting-crypto-covering-1021" target="_blank" rel="noopener noreferrer" className="text-xl font-medium group-hover:text-primary transition-colors text-left" onClick={(e) => e.stopPropagation()}>Banks build stablecoins into Zelle</a>
+                          </div>
+                        </AccordionTrigger>
+                        <AccordionContent className="pt-2 pb-4">
+                          <div className="text-lg leading-relaxed text-muted-foreground font-light space-y-4">
+                            <p>Early Warning Services, the joint venture behind Zelle, is incorporating a stablecoin into Zelle for cross border payments. Zelle processed $1T in volume in 2024 across 2,200 connected banks. The seven owner banks are BofA, Capital One, JPMorgan Chase, PNC, Truist, U.S. Bank, and Wells Fargo.</p>
+                            <p>Separately, banks are pursuing a consortium approach for G7 currency stablecoins including USD, EUR, JPY, GBP, and CAD.</p>
+                            <p>Zelle offers immediate distribution but questionable circulation stickiness. If the main purpose is cross border, this will likely be the classic stablecoin sandwich setup on a blockchain based ACH equivalent.</p>
+                            <p>Split T-Bill returns seven ways and each bank gets maybe 57 basis points assuming 4% yield and no revenue sharing. Compare that to the Q1 2025 bank net interest margin of 3.25% on traditional deposits. When rehypothecation is limited, banks lose money. This is why consortium bank plays are challenging and why tokenized deposits are the most likely outcome for bank led RWAs. Still, leveraging blockchain infrastructure on $1T of volumes is a net positive. Interop battles and competition from Arc and Tempo incoming.</p>
                           </div>
                         </AccordionContent>
                       </AccordionItem>
