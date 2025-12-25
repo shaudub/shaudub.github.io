@@ -146,6 +146,23 @@ export default function Home() {
 
                   <div className="space-y-6 pl-4 border-l border-border/50">
                     <Accordion type="single" collapsible className="w-full">
+                      <AccordionItem value="item-3" className="border-border/40">
+                        <AccordionTrigger className="hover:no-underline py-2 group text-left">
+                          <div className="flex flex-col items-start gap-1">
+                            <span className="text-sm text-muted-foreground font-normal">November 2025</span>
+                            <a href="https://underwritingcrypto.substack.com/p/underwriting-crypto-1117-121" target="_blank" rel="noopener noreferrer" className="text-xl font-medium group-hover:text-primary transition-colors text-left" onClick={(e) => e.stopPropagation()}>Robinhood and Kalshi’s situationship is in jeopardy</a>
+                          </div>
+                        </AccordionTrigger>
+                        <AccordionContent className="pt-2 pb-4">
+                          <div className="text-lg leading-relaxed text-muted-foreground font-light space-y-4">
+                            <p>Back in February, Robinhood tapped Kalshi as a partner to bring prediction markets (betting on politics, pop culture, etc.) to their 26M users, starting off with football betting. These are not “sports bets” but are considered commodities contracts under federal oversight, enabling what is effectively sports betting (and other betting) in all 50 states.</p>
+                            <p>Kalshi’s CFTC licensed exchange was an attractive partnership for Robinhood to jumpstart prediction markets on their platform - now the thesis has been proven, with ARR estimates at $300M, representing 30%-50% of the total fee pool. Analysts estimate Robinhood represents over 50% of all Kalshi volumes - why split this amount with Kalshi if they own the distribution?</p>
+                            <p>Robinhood has now acquired the exchange and clearinghouse MIAdx in partnership with market maker SIG. Now, they can handle wagers and cash flow in house, giving them full margin on trading fees. They had $2.5B worth of contracts traded in October generating 25M in revenue (1 cent per contract / 1bp take rate). An increased take rate from in house markets (launching Q1 2026) and a rapidly accelerating total volume (130% QoQ) set high expectations and demonstrate the power of a solid distribution network and clear PMF.</p>
+                            <p>The space continues to heat up with multiple players acquiring or partnering with exchanges to claim their stake: Polymarket acquired QCX, DraftKings acquired RailBird, and FanDuel is partnering with the CME group. No doubt Coinbase and other neobank competitors will soon follow.</p>
+                          </div>
+                        </AccordionContent>
+                      </AccordionItem>
+
                       <AccordionItem value="item-2" className="border-border/40">
                         <AccordionTrigger className="hover:no-underline py-2 group text-left">
                           <div className="flex flex-col items-start gap-1">
