@@ -183,8 +183,11 @@ export default function Home() {
                           <div className="text-lg leading-relaxed text-muted-foreground font-light space-y-4">
                             <p>Early Warning Services, the joint venture behind Zelle, is incorporating a stablecoin into Zelle for cross border payments. Zelle processed $1T in volume in 2024 across 2,200 connected banks. The seven owner banks are BofA, Capital One, JPMorgan Chase, PNC, Truist, U.S. Bank, and Wells Fargo.</p>
                             <p>Separately, banks are pursuing a consortium approach for G7 currency stablecoins including USD, EUR, JPY, GBP, and CAD.</p>
-                            <p>Zelle offers immediate distribution but questionable circulation stickiness. If the main purpose is cross border, this will likely be the classic stablecoin sandwich setup on a blockchain based ACH equivalent.</p>
-                            <p>Split T-Bill returns seven ways and each bank gets maybe 57 basis points assuming 4% yield and no revenue sharing. Compare that to the Q1 2025 bank net interest margin of 3.25% on traditional deposits. When rehypothecation is limited, banks lose money. This is why consortium bank plays are challenging and why tokenized deposits are the most likely outcome for bank led RWAs. Still, leveraging blockchain infrastructure on $1T of volumes is a net positive. Interop battles and competition from Arc and Tempo incoming.</p>
+                            <div className="pt-4">
+                              <p className="font-bold mb-2">Shaurya’s take</p>
+                              <p className="mb-4">Zelle offers immediate distribution but questionable circulation stickiness. If the main purpose is cross border, this will likely be the classic stablecoin sandwich setup on a blockchain based ACH equivalent.</p>
+                              <p>Split T-Bill returns seven ways and each bank gets maybe 57 basis points assuming 4% yield and no revenue sharing. Compare that to the Q1 2025 bank net interest margin of 3.25% on traditional deposits. When rehypothecation is limited, banks lose money. This is why consortium bank plays are challenging and why tokenized deposits are the most likely outcome for bank led RWAs. Still, leveraging blockchain infrastructure on $1T of volumes is a net positive. Interop battles and competition from Arc and Tempo incoming.</p>
+                            </div>
                           </div>
                         </AccordionContent>
                       </AccordionItem>
