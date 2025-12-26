@@ -121,9 +121,25 @@ export default function Home() {
                         Past Experience
                       </AccordionTrigger>
                       <AccordionContent className="pt-2 pb-2">
-                        <p className="text-lg leading-relaxed text-muted-foreground font-light">
-                          Previous roles and internships where I honed my skills in financial analysis and strategy.
-                        </p>
+                        <div className="text-lg leading-relaxed text-muted-foreground font-light space-y-4">
+                          <p>
+                            I previously worked as a financial analyst at Microsoft. I got to work on 6 different teams (internship included) in my time there.
+                          </p>
+                          <ul className="list-disc pl-5 space-y-2">
+                            <li>Spot pricing for Azure Virtual Machines</li>
+                            <li>Commercial bookings and renewals</li>
+                            <li>Margin strategy for ERP/CRM offerings</li>
+                            <li>Revenue planning / strategy for developer division</li>
+                            <li>Korea sales finance for hardware and ERP/CRM (lived in Seoul for 6 months)</li>
+                            <li>Treasury cash flow data science</li>
+                          </ul>
+                          <p>
+                            I also contributed to work within the Plural Technology Collaboratory, a division of MS Research special projects. A highlight is the plurality book, an open-source body of text written through a code repository where commits are approved through a governance solution called Gov4Git.
+                          </p>
+                          <p>
+                            I grew up in the Bay Area and graduted from UT Austin. My coursework revolved around finance, statistics, and philosophy.
+                          </p>
+                        </div>
                       </AccordionContent>
                     </AccordionItem>
                   </Accordion>
