@@ -76,7 +76,7 @@ export default function Home() {
                 <span className="sr-only">Email</span>
               </Button>
             </HoverCardTrigger>
-            <HoverCardContent className="w-auto p-1.5 bg-secondary border-none shadow-lg z-50" align="end">
+            <HoverCardContent className="w-auto px-4 py-2 bg-secondary border-none shadow-lg z-50" align="end">
               <div className="flex items-center gap-2">
                 <a 
                   href="mailto:dubeyshaurya@gmail.com" 
