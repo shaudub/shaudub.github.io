@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Linkedin, Mail, Twitter, Moon, Sun } from "lucide-react";
+import { Linkedin, Mail, Twitter, Moon, Sun, Copy, Check } from "lucide-react";
 import profileImage from "@assets/IMG_1569_1766626569319.png";
 import {
   Accordion,
@@ -8,10 +8,16 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 import { useState, useEffect } from "react";
 
 export default function Home() {
   const [theme, setTheme] = useState("light");
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -28,6 +34,12 @@ export default function Home() {
 
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
+  };
+
+  const copyEmail = () => {
+    navigator.clipboard.writeText("dubeyshaurya@gmail.com");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
   };
 
   return (
@@ -56,10 +68,33 @@ export default function Home() {
             <Linkedin className="h-5 w-5" />
             <span className="sr-only">LinkedIn</span>
           </Button>
-          <Button variant="ghost" size="icon" className="rounded-full hover:bg-foreground hover:text-background transition-colors">
-            <Mail className="h-5 w-5" />
-            <span className="sr-only">Email</span>
-          </Button>
+          
+          <Popover>
+            <PopoverTrigger asChild>
+              <Button variant="ghost" size="icon" className="rounded-full hover:bg-foreground hover:text-background transition-colors">
+                <Mail className="h-5 w-5" />
+                <span className="sr-only">Email</span>
+              </Button>
+            </PopoverTrigger>
+            <PopoverContent className="w-auto p-3" align="end">
+              <div className="flex items-center gap-2">
+                <span className="text-sm font-medium">dubeyshaurya@gmail.com</span>
+                <Button 
+                  variant="ghost" 
+                  size="icon" 
+                  className="h-6 w-6 rounded-md" 
+                  onClick={copyEmail}
+                >
+                  {copied ? (
+                    <Check className="h-3 w-3 text-green-500" />
+                  ) : (
+                    <Copy className="h-3 w-3" />
+                  )}
+                  <span className="sr-only">Copy email</span>
+                </Button>
+              </div>
+            </PopoverContent>
+          </Popover>
         </div>
       </nav>
 
