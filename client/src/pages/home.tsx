@@ -134,7 +134,7 @@ export default function Home() {
                             <li>Treasury cash flow data science</li>
                           </ul>
                           <p>
-                            I also <a href="https://x.com/pluralitybook/status/1771969609484136633?s=20" target="_blank" rel="noopener noreferrer" className="underline decoration-1 underline-offset-4 hover:text-primary transition-colors">contributed</a> to work within the Plural Technology Collaboratory, a division of MS Research special projects. A highlight is the plurality book, an open-source body of text written through a code repository where commits are approved through a governance solution called Gov4Git. I led marketing.
+                            I also <a href="https://x.com/pluralitybook/status/1771969609484136633?s=20" target="_blank" rel="noopener noreferrer" className="underline decoration-1 underline-offset-4 hover:text-primary transition-colors">contributed</a> to work within the Plural Technology Collaboratory, a division of MS Research special projects. A highlight is the plurality book, an open-source body of text written through a code repository where commits are approved through a governance solution called Gov4Git.
                           </p>
                           <p>
                             I grew up in the Bay Area and graduted from UT Austin. My coursework revolved around finance, statistics, and philosophy.
