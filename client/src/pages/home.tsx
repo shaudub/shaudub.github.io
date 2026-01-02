@@ -226,7 +226,7 @@ export default function Home() {
                 <AccordionContent className="pt-4 pb-6 space-y-6">
                   <div className="space-y-4">
                     <p className="text-lg leading-relaxed text-muted-foreground font-light">
-                      I write in a crypto current events blog called <a href="https://underwritingcrypto.substack.com/" target="_blank" rel="noopener noreferrer" className="underline decoration-1 underline-offset-4 hover:text-primary transition-colors">Underwriting Crypto</a>. We post notable events from the industry every 2 weeks. Selected excerpts of my writing are below - for the rest, visit our substack.
+                      I write in a crypto current events blog. We post notable events from the industry every 2 weeks. Selected excerpts of my writing are below - for the rest, visit <a href="https://underwritingcrypto.substack.com/" target="_blank" rel="noopener noreferrer" className="underline decoration-1 underline-offset-4 hover:text-primary transition-colors">Underwriting Crypto</a>.
                     </p>
                   </div>
 
