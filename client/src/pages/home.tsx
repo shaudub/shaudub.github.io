@@ -9,10 +9,10 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
 import { useState, useEffect } from "react";
 
 export default function Home() {
@@ -69,14 +69,14 @@ export default function Home() {
             <span className="sr-only">LinkedIn</span>
           </Button>
           
-          <Popover>
-            <PopoverTrigger asChild>
+          <HoverCard openDelay={100} closeDelay={200}>
+            <HoverCardTrigger asChild>
               <Button variant="ghost" size="icon" className="rounded-full hover:bg-foreground hover:text-background transition-colors">
                 <Mail className="h-5 w-5" />
                 <span className="sr-only">Email</span>
               </Button>
-            </PopoverTrigger>
-            <PopoverContent className="w-auto p-3" align="end">
+            </HoverCardTrigger>
+            <HoverCardContent className="w-auto p-3" align="end">
               <div className="flex items-center gap-2">
                 <span className="text-sm font-medium">dubeyshaurya@gmail.com</span>
                 <Button 
@@ -93,8 +93,8 @@ export default function Home() {
                   <span className="sr-only">Copy email</span>
                 </Button>
               </div>
-            </PopoverContent>
-          </Popover>
+            </HoverCardContent>
+          </HoverCard>
         </div>
       </nav>
 
