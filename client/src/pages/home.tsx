@@ -216,10 +216,7 @@ export default function Home() {
                 <AccordionContent className="pt-4 pb-6 space-y-6">
                   <div className="space-y-4">
                     <p className="text-lg leading-relaxed text-muted-foreground font-light">
-                      I write in a crypto current events blog called Underwriting Crypto. We post 5 notable events from the industry every 2 weeks and offer an objective overview of what happened, with a not-as-objective take on what happened on each topic.
-                    </p>
-                    <p className="text-lg leading-relaxed text-muted-foreground font-light">
-                      Selected excerpts of my writing are below - for the rest, visit our substack.
+                      I write in a crypto current events blog called Underwriting Crypto. We post notable events from the industry every 2 weeks. Selected excerpts of my writing are below - for the rest, visit our substack.
                     </p>
                   </div>
 
