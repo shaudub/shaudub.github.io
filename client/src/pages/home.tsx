@@ -139,7 +139,36 @@ export default function Home() {
               transition={{ delay: 0.3, duration: 0.5 }}
               className="text-lg leading-relaxed text-foreground/90 font-light max-w-2xl mx-auto px-4"
             >
-              Working on commercial finance for Circle ($USDC) and writing about crypto current events at <a href="https://underwritingcrypto.substack.com/" target="_blank" rel="noopener noreferrer" className="underline decoration-1 underline-offset-4 hover:text-primary transition-colors">Underwriting Crypto</a>. My email is dubeyshaurya@gmail.com and my twitter handle is <a href="https://x.com/shaudub" target="_blank" rel="noopener noreferrer" className="underline decoration-1 underline-offset-4 hover:text-primary transition-colors">@shaudub</a>.
+              Working on commercial finance for Circle ($USDC) and writing about crypto current events at <a href="https://underwritingcrypto.substack.com/" target="_blank" rel="noopener noreferrer" className="underline decoration-1 underline-offset-4 hover:text-primary transition-colors">Underwriting Crypto</a>. My email is <HoverCard openDelay={100} closeDelay={200}>
+                <HoverCardTrigger asChild>
+                  <span className="underline decoration-1 underline-offset-4 hover:text-primary transition-colors cursor-pointer">
+                    dubeyshaurya@gmail.com
+                  </span>
+                </HoverCardTrigger>
+                <HoverCardContent className="w-auto p-3" align="center">
+                  <div className="flex items-center gap-2">
+                    <a 
+                      href="mailto:dubeyshaurya@gmail.com" 
+                      className="text-sm font-medium hover:text-primary transition-colors hover:underline"
+                    >
+                      dubeyshaurya@gmail.com
+                    </a>
+                    <Button 
+                      variant="ghost" 
+                      size="icon" 
+                      className="h-6 w-6 rounded-md" 
+                      onClick={copyEmail}
+                    >
+                      {copied ? (
+                        <Check className="h-3 w-3 text-green-500" />
+                      ) : (
+                        <Copy className="h-3 w-3" />
+                      )}
+                      <span className="sr-only">Copy email</span>
+                    </Button>
+                  </div>
+                </HoverCardContent>
+              </HoverCard> and my twitter handle is <a href="https://x.com/shaudub" target="_blank" rel="noopener noreferrer" className="underline decoration-1 underline-offset-4 hover:text-primary transition-colors">@shaudub</a>.
             </motion.p>
           </div>
 
