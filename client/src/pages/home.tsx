@@ -133,13 +133,17 @@ export default function Home() {
               </h1>
             </div>
             
-            <motion.p 
+            <motion.div 
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.5 }}
-              className="text-lg leading-relaxed text-foreground/90 font-light max-w-2xl mx-auto px-4"
+              className="text-lg leading-relaxed text-foreground/90 font-light max-w-2xl mx-auto px-4 space-y-4"
             >
-              Working on commercial finance for Circle ($USDC) and writing about crypto current events at <a href="https://underwritingcrypto.substack.com/" target="_blank" rel="noopener noreferrer" className="underline decoration-1 underline-offset-4 hover:text-primary transition-colors">Underwriting Crypto</a>. My email is <HoverCard openDelay={100} closeDelay={200}>
+              <p>
+                Working on commercial finance for Circle ($USDC) and writing about crypto current events at <a href="https://underwritingcrypto.substack.com/" target="_blank" rel="noopener noreferrer" className="underline decoration-1 underline-offset-4 hover:text-primary transition-colors">Underwriting Crypto</a>.
+              </p>
+              <p>
+                My email is <HoverCard openDelay={100} closeDelay={200}>
                 <HoverCardTrigger asChild>
                   <span className="underline decoration-1 underline-offset-4 hover:text-primary transition-colors cursor-pointer">
                     dubeyshaurya@gmail.com
@@ -162,8 +166,9 @@ export default function Home() {
                     </Button>
                   </div>
                 </HoverCardContent>
-              </HoverCard> and my twitter handle is <a href="https://x.com/shaudub" target="_blank" rel="noopener noreferrer" className="underline decoration-1 underline-offset-4 hover:text-primary transition-colors">@shaudub</a>.
-            </motion.p>
+              </HoverCard> and my X handle is <a href="https://x.com/shaudub" target="_blank" rel="noopener noreferrer" className="underline decoration-1 underline-offset-4 hover:text-primary transition-colors">@shaudub</a>.
+              </p>
+            </motion.div>
           </div>
 
           {/* Accordion Sections */}
