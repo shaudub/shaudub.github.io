@@ -202,7 +202,7 @@ export default function Home() {
                             <li>Spot pricing for Azure Virtual Machines</li>
                             <li>Commercial bookings and renewals</li>
                             <li>Margin strategy for ERP/CRM offerings</li>
-                            <li>Revenue planning / strategy for developer division</li>
+                            <li>Revenue planning / strategy for Cloud and AI</li>
                             <li>Korea sales finance for hardware and ERP/CRM (lived in Seoul for 6 months)</li>
                             <li>Treasury cash flow data science</li>
                           </ul>
