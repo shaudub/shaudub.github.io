@@ -140,7 +140,7 @@ export default function Home() {
               className="text-lg leading-relaxed text-foreground/90 font-light max-w-2xl mx-auto px-4 space-y-4"
             >
               <p>
-                Working on commercial finance for Circle ($USDC) and writing about crypto current events at <a href="https://underwritingcrypto.substack.com/" target="_blank" rel="noopener noreferrer" className="underline decoration-1 underline-offset-4 hover:text-primary transition-colors">Underwriting Crypto</a>.
+                Working on commercial finance for Circle ($USDC) and covering crypto current events at <a href="https://underwritingcrypto.substack.com/" target="_blank" rel="noopener noreferrer" className="underline decoration-1 underline-offset-4 hover:text-primary transition-colors">Underwriting Crypto</a>.
               </p>
               <p>
                 My email is <HoverCard openDelay={100} closeDelay={200}>
