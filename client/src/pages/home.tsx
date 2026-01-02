@@ -78,7 +78,12 @@ export default function Home() {
             </HoverCardTrigger>
             <HoverCardContent className="w-auto p-3" align="end">
               <div className="flex items-center gap-2">
-                <span className="text-sm font-medium">dubeyshaurya@gmail.com</span>
+                <a 
+                  href="mailto:dubeyshaurya@gmail.com" 
+                  className="text-sm font-medium hover:text-primary transition-colors hover:underline"
+                >
+                  dubeyshaurya@gmail.com
+                </a>
                 <Button 
                   variant="ghost" 
                   size="icon" 
