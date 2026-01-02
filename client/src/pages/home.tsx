@@ -179,9 +179,14 @@ export default function Home() {
                   Experience
                 </AccordionTrigger>
                 <AccordionContent className="pt-4 pb-6">
-                  <p className="text-lg leading-relaxed text-muted-foreground font-light mb-4">
-                    My work at Circle focuses on commercial incentives, specifically understanding how partnership revenue sharing influences USDC circulation growth and net interest margin. Other initiatives I've contributed to include analyses for new product lines, marketing spend planning, and helping <a href="https://www.sec.gov/Archives/edgar/data/1876042/000119312525070481/d737521ds1.htm" target="_blank" rel="noopener noreferrer" className="underline decoration-1 underline-offset-4 hover:text-primary transition-colors">take $CRCL public</a>. The best parts of my work are interdisciplinary, and I am lucky to collaborate with teams in data science, marketing, product, investor relations, and more.
-                  </p>
+                  <div className="text-lg leading-relaxed text-muted-foreground font-light mb-4 space-y-4">
+                    <p>
+                      My work at Circle focuses on commercial incentives, specifically understanding how partnership revenue sharing influences USDC circulation growth and net interest margin. Other initiatives I've contributed to include analyses for new product lines, marketing spend planning, and helping <a href="https://www.sec.gov/Archives/edgar/data/1876042/000119312525070481/d737521ds1.htm" target="_blank" rel="noopener noreferrer" className="underline decoration-1 underline-offset-4 hover:text-primary transition-colors">take $CRCL public</a>.
+                    </p>
+                    <p>
+                      The best parts of my work are interdisciplinary, and I am lucky to collaborate with teams in data science, marketing, product, investor relations, and more.
+                    </p>
+                  </div>
 
                   <Accordion type="single" collapsible className="w-full">
                     <AccordionItem value="past-experience" className="border-t border-border/40">
