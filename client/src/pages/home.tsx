@@ -44,26 +44,22 @@ export default function Home() {
 
   return (
     <div className="min-h-screen w-full bg-background relative selection:bg-primary/10 transition-colors duration-300">
-      {/* Top Left Theme Toggle */}
-      <div className="absolute top-6 left-6 md:top-8 md:left-8 z-10">
-        <Button 
-          variant="ghost" 
-          size="icon" 
-          onClick={toggleTheme}
-          className="rounded-full hover:bg-foreground hover:text-background transition-colors"
-        >
-          {theme === "light" ? (
-            <Moon className="h-5 w-5" />
-          ) : (
-            <Sun className="h-5 w-5" />
-          )}
-          <span className="sr-only">Toggle theme</span>
-        </Button>
-      </div>
-
       {/* Top Right Navigation */}
       <nav className="absolute top-6 right-6 md:top-8 md:right-8 z-10">
         <div className="flex gap-2">
+          <Button 
+            variant="ghost" 
+            size="icon" 
+            onClick={toggleTheme}
+            className="rounded-full hover:bg-foreground hover:text-background transition-colors mr-2"
+          >
+            {theme === "light" ? (
+              <Moon className="h-5 w-5" />
+            ) : (
+              <Sun className="h-5 w-5" />
+            )}
+            <span className="sr-only">Toggle theme</span>
+          </Button>
           <Button variant="ghost" size="icon" className="rounded-full hover:bg-foreground hover:text-background transition-colors">
             <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 fill-current"><title>X</title><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
             <span className="sr-only">X (Twitter)</span>
