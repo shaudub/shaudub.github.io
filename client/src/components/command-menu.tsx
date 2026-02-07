@@ -111,6 +111,29 @@ export function CommandMenu({
           </CommandGroup>
           
           <CommandSeparator />
+          
+          <CommandGroup heading="Social">
+            <CommandItem
+              onSelect={() => runCommand(() => window.open("https://x.com/shaudub", "_blank"))}
+            >
+              <Twitter className="mr-2 h-4 w-4" />
+              <span>Twitter (@shaudub)</span>
+            </CommandItem>
+            <CommandItem
+              onSelect={() => runCommand(() => window.open("https://www.linkedin.com/in/shaurya-dubey/", "_blank"))}
+            >
+              <Linkedin className="mr-2 h-4 w-4" />
+              <span>LinkedIn</span>
+            </CommandItem>
+            <CommandItem
+              onSelect={() => runCommand(() => window.location.href = "mailto:dubeyshaurya@gmail.com")}
+            >
+              <Mail className="mr-2 h-4 w-4" />
+              <span>Email Me</span>
+            </CommandItem>
+          </CommandGroup>
+          
+          <CommandSeparator />
 
           <CommandGroup heading="Writing Pieces">
             <CommandItem
@@ -188,29 +211,6 @@ export function CommandMenu({
             >
               <FileText className="mr-2 h-4 w-4" />
               <span>Banks build stablecoins into Zelle</span>
-            </CommandItem>
-          </CommandGroup>
-          
-          <CommandSeparator />
-          
-          <CommandGroup heading="Social">
-            <CommandItem
-              onSelect={() => runCommand(() => window.open("https://x.com/shaudub", "_blank"))}
-            >
-              <Twitter className="mr-2 h-4 w-4" />
-              <span>Twitter (@shaudub)</span>
-            </CommandItem>
-            <CommandItem
-              onSelect={() => runCommand(() => window.open("https://www.linkedin.com/in/shaurya-dubey/", "_blank"))}
-            >
-              <Linkedin className="mr-2 h-4 w-4" />
-              <span>LinkedIn</span>
-            </CommandItem>
-            <CommandItem
-              onSelect={() => runCommand(() => window.location.href = "mailto:dubeyshaurya@gmail.com")}
-            >
-              <Mail className="mr-2 h-4 w-4" />
-              <span>Email Me</span>
             </CommandItem>
           </CommandGroup>
           
