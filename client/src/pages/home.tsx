@@ -181,7 +181,10 @@ export default function Home() {
                 <AccordionContent className="pt-4 pb-6">
                   <div className="text-lg leading-relaxed text-muted-foreground font-light mb-4 space-y-4">
                     <p>
-                      My work at Circle focuses on commercial incentives, specifically understanding how partnership revenue sharing influences USDC circulation growth and net interest margin. Other initiatives I've led include analyses for new product lines, marketing spend planning, and helping <a href="https://www.sec.gov/Archives/edgar/data/1876042/000119312525070481/d737521ds1.htm" target="_blank" rel="noopener noreferrer" className="underline decoration-1 underline-offset-4 hover:text-primary transition-colors">take $CRCL public</a>.
+                      My work at Circle focuses on commercial incentives, specifically understanding how partnership revenue sharing influences USDC circulation growth and net interest margin.
+                    </p>
+                    <p>
+                      Other initiatives I've led include analyses for new product lines, marketing spend planning, wall street reporting, bespoke commercial economic modeling, and helping <a href="https://www.sec.gov/Archives/edgar/data/1876042/000119312525070481/d737521ds1.htm" target="_blank" rel="noopener noreferrer" className="underline decoration-1 underline-offset-4 hover:text-primary transition-colors">take $CRCL public</a>.
                     </p>
                     <p>
                       The best parts of my work are interdisciplinary, and I am lucky to collaborate with teams in data science, marketing, product, investor relations, and more.
@@ -236,7 +239,7 @@ export default function Home() {
                         <AccordionTrigger className="hover:no-underline py-2 group text-left">
                           <div className="flex flex-col items-start gap-1">
                             <span className="text-sm text-muted-foreground font-normal">January 2026</span>
-                            <span className="text-xl font-medium group-hover:text-primary transition-colors text-left">Stablecoin Yield, Once and For All</span>
+                            <a href="https://underwritingcrypto.substack.com/p/underwriting-crypto-115-129" target="_blank" rel="noopener noreferrer" className="text-xl font-medium group-hover:text-primary transition-colors text-left" onClick={(e) => e.stopPropagation()}>Stablecoin Yield, Once and For All</a>
                           </div>
                         </AccordionTrigger>
                         <AccordionContent className="pt-2 pb-4">
