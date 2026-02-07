@@ -123,6 +123,12 @@ export default function Home() {
         </div>
       </nav>
 
+      <div className="fixed bottom-6 left-6 z-50 pointer-events-none select-none">
+        <span className="text-[10px] font-mono text-muted-foreground/40 tracking-widest">
+          VISITOR #8,492
+        </span>
+      </div>
+
       <div className="max-w-3xl mx-auto px-6 py-20 md:py-32">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
