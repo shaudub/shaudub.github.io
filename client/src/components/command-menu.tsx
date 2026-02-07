@@ -7,7 +7,8 @@ import {
   Linkedin,
   Twitter,
   FileText,
-  Briefcase
+  Briefcase,
+  Sparkles
 } from "lucide-react";
 import { DialogTitle } from "@radix-ui/react-dialog";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
@@ -22,7 +23,19 @@ import {
   CommandSeparator,
 } from "@/components/ui/command";
 
-export function CommandMenu() {
+interface CommandMenuProps {
+  setMainAccordionValue: (value: string) => void;
+  setWritingAccordionValue: (value: string) => void;
+  toggleAiSummary: () => void;
+  isSummaryMode: boolean;
+}
+
+export function CommandMenu({ 
+  setMainAccordionValue, 
+  setWritingAccordionValue,
+  toggleAiSummary,
+  isSummaryMode 
+}: CommandMenuProps) {
   const [open, setOpen] = React.useState(false);
 
   React.useEffect(() => {
@@ -75,7 +88,10 @@ export function CommandMenu() {
           <CommandGroup heading="Navigation">
             <CommandItem
               onSelect={() => runCommand(() => {
-                document.querySelector('[data-value="experience"]')?.scrollIntoView({ behavior: 'smooth' });
+                setMainAccordionValue("experience");
+                setTimeout(() => {
+                  document.querySelector('[data-value="experience"]')?.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
               })}
             >
               <Briefcase className="mr-2 h-4 w-4" />
@@ -83,11 +99,95 @@ export function CommandMenu() {
             </CommandItem>
             <CommandItem
               onSelect={() => runCommand(() => {
-                document.querySelector('[data-value="writing"]')?.scrollIntoView({ behavior: 'smooth' });
+                setMainAccordionValue("writing");
+                setTimeout(() => {
+                  document.querySelector('[data-value="writing"]')?.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
               })}
             >
               <FileText className="mr-2 h-4 w-4" />
               <span>Writing</span>
+            </CommandItem>
+          </CommandGroup>
+          
+          <CommandSeparator />
+
+          <CommandGroup heading="Writing Pieces">
+            <CommandItem
+              onSelect={() => runCommand(() => {
+                setMainAccordionValue("writing");
+                setWritingAccordionValue("item-5");
+                setTimeout(() => {
+                  document.querySelector('[data-value="writing"]')?.scrollIntoView({ behavior: 'smooth' });
+                  // Try to scroll to the specific item after a delay to allow expansion
+                  setTimeout(() => {
+                     document.querySelector('[data-value="item-5"]')?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                  }, 300);
+                }, 100);
+              })}
+            >
+              <FileText className="mr-2 h-4 w-4" />
+              <span>Stablecoin Yield, Once and For All</span>
+            </CommandItem>
+            <CommandItem
+              onSelect={() => runCommand(() => {
+                setMainAccordionValue("writing");
+                setWritingAccordionValue("item-4");
+                setTimeout(() => {
+                  document.querySelector('[data-value="writing"]')?.scrollIntoView({ behavior: 'smooth' });
+                  setTimeout(() => {
+                     document.querySelector('[data-value="item-4"]')?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                  }, 300);
+                }, 100);
+              })}
+            >
+              <FileText className="mr-2 h-4 w-4" />
+              <span>Hyperliquid deploys native USDC</span>
+            </CommandItem>
+            <CommandItem
+              onSelect={() => runCommand(() => {
+                setMainAccordionValue("writing");
+                setWritingAccordionValue("item-3");
+                setTimeout(() => {
+                  document.querySelector('[data-value="writing"]')?.scrollIntoView({ behavior: 'smooth' });
+                   setTimeout(() => {
+                     document.querySelector('[data-value="item-3"]')?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                  }, 300);
+                }, 100);
+              })}
+            >
+              <FileText className="mr-2 h-4 w-4" />
+              <span>Robinhood and Kalshi</span>
+            </CommandItem>
+            <CommandItem
+              onSelect={() => runCommand(() => {
+                setMainAccordionValue("writing");
+                setWritingAccordionValue("item-2");
+                setTimeout(() => {
+                  document.querySelector('[data-value="writing"]')?.scrollIntoView({ behavior: 'smooth' });
+                   setTimeout(() => {
+                     document.querySelector('[data-value="item-2"]')?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                  }, 300);
+                }, 100);
+              })}
+            >
+              <FileText className="mr-2 h-4 w-4" />
+              <span>CashApp launchs BTC payments</span>
+            </CommandItem>
+            <CommandItem
+              onSelect={() => runCommand(() => {
+                setMainAccordionValue("writing");
+                setWritingAccordionValue("item-1");
+                setTimeout(() => {
+                  document.querySelector('[data-value="writing"]')?.scrollIntoView({ behavior: 'smooth' });
+                   setTimeout(() => {
+                     document.querySelector('[data-value="item-1"]')?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                  }, 300);
+                }, 100);
+              })}
+            >
+              <FileText className="mr-2 h-4 w-4" />
+              <span>Banks build stablecoins into Zelle</span>
             </CommandItem>
           </CommandGroup>
           
@@ -117,6 +217,12 @@ export function CommandMenu() {
           <CommandSeparator />
           
           <CommandGroup heading="Actions">
+            <CommandItem
+              onSelect={() => runCommand(toggleAiSummary)}
+            >
+              <Sparkles className="mr-2 h-4 w-4" />
+              <span>{isSummaryMode ? "Disable" : "Enable"} AI Summary</span>
+            </CommandItem>
             <CommandItem
               onSelect={() => runCommand(() => {
                  const themeBtn = document.querySelector('button[aria-label="Toggle theme"]') as HTMLButtonElement;

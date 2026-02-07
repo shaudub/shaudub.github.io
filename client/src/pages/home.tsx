@@ -22,6 +22,8 @@ export default function Home() {
   const [theme, setTheme] = useState("light");
   const [copied, setCopied] = useState(false);
   const [isSummaryMode, setIsSummaryMode] = useState(false);
+  const [mainAccordionValue, setMainAccordionValue] = useState<string>("");
+  const [writingAccordionValue, setWritingAccordionValue] = useState<string>("");
 
   useEffect(() => {
     const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -48,7 +50,12 @@ export default function Home() {
 
   return (
     <div className="min-h-screen w-full bg-background relative selection:bg-primary/10 transition-colors duration-300">
-      <CommandMenu />
+      <CommandMenu 
+        setMainAccordionValue={setMainAccordionValue}
+        setWritingAccordionValue={setWritingAccordionValue}
+        toggleAiSummary={() => setIsSummaryMode(prev => !prev)}
+        isSummaryMode={isSummaryMode}
+      />
       {/* Top Right Navigation */}
       <nav className="absolute top-6 right-6 md:top-8 md:right-8 z-10">
         <div className="flex gap-2">
@@ -193,7 +200,13 @@ export default function Home() {
 
           {/* Accordion Sections */}
           <div className="max-w-2xl mx-auto w-full">
-            <Accordion type="single" collapsible className="w-full">
+            <Accordion 
+              type="single" 
+              collapsible 
+              className="w-full"
+              value={mainAccordionValue}
+              onValueChange={setMainAccordionValue}
+            >
               <AccordionItem value="experience" className="border-border/40">
                 <AccordionTrigger className="text-xl font-bold hover:no-underline hover:text-primary transition-colors">
                   Experience
@@ -271,7 +284,13 @@ export default function Home() {
                   </div>
 
                   <div className="space-y-6 pl-4 border-l border-border/50">
-                    <Accordion type="single" collapsible className="w-full">
+                    <Accordion 
+                      type="single" 
+                      collapsible 
+                      className="w-full"
+                      value={writingAccordionValue}
+                      onValueChange={setWritingAccordionValue}
+                    >
                       <AccordionItem value="item-5" className="border-border/40">
                         <AccordionTrigger className="hover:no-underline py-2 group text-left">
                           <div className="flex flex-col items-start gap-1">
