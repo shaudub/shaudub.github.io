@@ -357,9 +357,50 @@ export default function Home() {
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
+            
+            <ViewCounter />
           </div>
         </motion.div>
       </div>
+    </div>
+  );
+}
+
+function ViewCounter() {
+  const [views, setViews] = useState<number | null>(null);
+
+  useEffect(() => {
+    // Unique visitor check using localStorage
+    const visited = localStorage.getItem("portfolio_visited");
+    // Use a unique namespace for this site
+    const namespace = "shaurya-dubey.github.io"; 
+    const key = "visits";
+
+    if (visited) {
+      // Already visited, just get the count
+      fetch(`https://api.countapi.xyz/get/${namespace}/${key}`)
+        .then(res => res.json())
+        .then(data => setViews(data.value))
+        .catch(err => console.error("Error fetching views:", err));
+    } else {
+      // New visitor, increment count
+      fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+        .then(res => res.json())
+        .then(data => {
+          setViews(data.value);
+          localStorage.setItem("portfolio_visited", "true");
+        })
+        .catch(err => console.error("Error incrementing views:", err));
+    }
+  }, []);
+
+  if (views === null) return null;
+
+  return (
+    <div className="mt-16 text-center">
+      <p className="text-xs text-muted-foreground/50 font-mono">
+        Unique Visitors: {views.toLocaleString()}
+      </p>
     </div>
   );
 }
