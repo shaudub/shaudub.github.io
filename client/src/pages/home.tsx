@@ -373,25 +373,45 @@ function ViewCounter() {
     // Unique visitor check using localStorage
     const visited = localStorage.getItem("portfolio_visited");
     // Use a unique namespace for this site
+    // Using counterapi.com as it is more reliable
     const namespace = "shaurya-dubey.github.io"; 
-    const key = "visits";
+    const key = "portfolio";
 
-    if (visited) {
-      // Already visited, just get the count
-      fetch(`https://api.countapi.xyz/get/${namespace}/${key}`)
-        .then(res => res.json())
-        .then(data => setViews(data.value))
-        .catch(err => console.error("Error fetching views:", err));
-    } else {
-      // New visitor, increment count
-      fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
-        .then(res => res.json())
-        .then(data => {
-          setViews(data.value);
+    const fetchViews = async () => {
+      try {
+        if (!visited) {
+          // Increment for new visitor
+          // Note: counterapi.com handles uniqueness by IP automatically if we use the 'visit' endpoint usually, 
+          // but we'll stick to their standard API. 
+          // Actually, let's use a robust one: https://api.countapi.xyz is down often.
+          
+          // Let's try to just use a simple robust counter. 
+          // We will use a try/catch block and if it fails, we just don't show it or show a placeholder.
+          
+          // Using a different service that is very stable: https://hits.seeyoufarm.com (Image based)
+          // But user wanted a text counter. 
+          
+          // Let's retry countapi but with better error handling, 
+          // or try 'https://api.counterapi.dev/v1/shaurya-dubey.github.io/portfolio/up'
+          
+          const res = await fetch(`https://api.counterapi.dev/v1/${namespace}/${key}/up`);
+          const data = await res.json();
+          setViews(data.count);
           localStorage.setItem("portfolio_visited", "true");
-        })
-        .catch(err => console.error("Error incrementing views:", err));
-    }
+        } else {
+          // Just get the count
+          const res = await fetch(`https://api.counterapi.dev/v1/${namespace}/${key}`);
+          const data = await res.json();
+          setViews(data.count);
+        }
+      } catch (err) {
+        console.error("Error fetching views:", err);
+        // Fallback to a mock number if API fails so UI isn't empty in dev
+        // setViews(1234); 
+      }
+    };
+
+    fetchViews();
   }, []);
 
   if (views === null) return null;
