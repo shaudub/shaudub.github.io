@@ -251,7 +251,7 @@ export default function Home() {
                         id="ai-summary" 
                         checked={isSummaryMode}
                         onCheckedChange={setIsSummaryMode}
-                        className="data-[state=checked]:bg-primary border border-input"
+                        className="data-[state=checked]:bg-primary"
                       />
                       <Label 
                         htmlFor="ai-summary" 
