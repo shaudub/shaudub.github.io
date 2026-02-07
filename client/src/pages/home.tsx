@@ -243,26 +243,26 @@ export default function Home() {
               </AccordionItem>
 
               <AccordionItem value="writing" className="border-border/40">
-                <div className="flex items-center justify-between w-full pr-4">
-                  <AccordionTrigger className="text-xl font-bold hover:no-underline hover:text-primary transition-colors flex-1">
-                    Writing
-                  </AccordionTrigger>
-                  <div className="flex items-center gap-2 z-10" onClick={(e) => e.stopPropagation()}>
-                    <Switch 
-                      id="ai-summary" 
-                      checked={isSummaryMode}
-                      onCheckedChange={setIsSummaryMode}
-                      className="data-[state=checked]:bg-primary"
-                    />
-                    <Label 
-                      htmlFor="ai-summary" 
-                      className={`text-xs font-mono cursor-pointer flex items-center gap-1.5 ${isSummaryMode ? 'text-primary font-medium' : 'text-muted-foreground'}`}
-                    >
-                      <Sparkles className="h-3 w-3" />
-                      AI Summary
-                    </Label>
+                <AccordionTrigger className="text-xl font-bold hover:no-underline hover:text-primary transition-colors">
+                  <div className="flex items-center justify-between w-full pr-4">
+                    <span>Writing</span>
+                    <div className="flex items-center gap-2" onClick={(e) => e.stopPropagation()}>
+                      <Switch 
+                        id="ai-summary" 
+                        checked={isSummaryMode}
+                        onCheckedChange={setIsSummaryMode}
+                        className="data-[state=checked]:bg-primary border border-input"
+                      />
+                      <Label 
+                        htmlFor="ai-summary" 
+                        className={`text-xs font-mono cursor-pointer flex items-center gap-1.5 ${isSummaryMode ? 'text-primary font-medium' : 'text-muted-foreground'}`}
+                      >
+                        <Sparkles className="h-3 w-3" />
+                        AI Summary
+                      </Label>
+                    </div>
                   </div>
-                </div>
+                </AccordionTrigger>
                 <AccordionContent className="pt-4 pb-6 space-y-6">
                   <div className="space-y-4">
                     <p className="text-lg leading-relaxed text-muted-foreground font-light">
