@@ -505,17 +505,38 @@ export default function Home() {
 }
 
 function ViewCounter() {
-  const [views, setViews] = useState<number>(8492);
+  const [views, setViews] = useState<number | null>(null);
 
   useEffect(() => {
-    // Unique visitor check using localStorage for mockup
+    // Unique visitor check using localStorage
     const visited = localStorage.getItem("portfolio_visited");
-    if (!visited) {
-      // Increment for new visitor
-      setViews(prev => prev + 1);
-      localStorage.setItem("portfolio_visited", "true");
-    }
+    const namespace = "shaurya-dubey.github.io"; 
+    const key = "portfolio_views";
+
+    const fetchViews = async () => {
+      try {
+        if (!visited) {
+          // Increment for new visitor
+          const res = await fetch(`https://api.counterapi.dev/v1/${namespace}/${key}/up`);
+          const data = await res.json();
+          setViews(data.count);
+          localStorage.setItem("portfolio_visited", "true");
+        } else {
+          // Just get the count
+          const res = await fetch(`https://api.counterapi.dev/v1/${namespace}/${key}`);
+          const data = await res.json();
+          setViews(data.count);
+        }
+      } catch (err) {
+        console.error("Error fetching views:", err);
+        // Fallback silently or show nothing if API fails
+      }
+    };
+
+    fetchViews();
   }, []);
+
+  if (views === null) return null;
 
   return (
     <div className="mt-20 mb-6 text-left select-none">
